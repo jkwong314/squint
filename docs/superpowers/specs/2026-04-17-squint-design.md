@@ -1,11 +1,11 @@
-# Order of Operations — Design Spec
+# Squint — Design Spec
 
 **Date:** 2026-04-17
 **Status:** Approved, ready for implementation plan
 
 ## Summary
 
-**Order of Operations** is a browser-based visual hierarchy trainer. The user is shown a UI mockup and clicks its elements in order of visual importance. Their ranking is scored against a hand-curated "expert" answer and they receive per-element rationale explaining why each element holds the weight it does.
+**Squint** is a browser-based visual hierarchy trainer. (Named after what designers actually do to check hierarchy — squint at a page, strip away content, see pure weight.) The user is shown a UI mockup and clicks its elements in order of visual importance. Their ranking is scored against a hand-curated "expert" answer and they receive per-element rationale explaining why each element holds the weight it does.
 
 Built as a React + Vite static app with no backend, no AI, no accounts. All content (mockups, rankings, rationales) is hand-authored and ships in the bundle.
 
@@ -256,7 +256,7 @@ Test runner: Vitest (Vite-native, minimal config).
 
 ## Persistence (localStorage)
 
-Single key `order-of-operations:progress:v1` holding:
+Single key `squint:progress:v1` holding:
 ```js
 {
   scenarios: { [scenarioId]: { bestScore: number, attempts: number } },
@@ -269,7 +269,7 @@ Version the key (`:v1`) so a future schema change can migrate or discard cleanly
 
 ## Deployment
 
-- New GitHub repo `visual-hierarchy-trainer` under the user's `jkwong314` account.
+- New GitHub repo `squint` under the user's `jkwong314` account.
 - Vercel project with auto-deploy on push to `main`.
 - Live URL returned to the user.
 
