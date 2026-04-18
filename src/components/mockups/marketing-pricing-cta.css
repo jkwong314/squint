@@ -1,0 +1,81 @@
+.mk-pcta {
+  background: #fafaf7;
+  color: #111;
+  font-family: 'Inter', sans-serif;
+  padding: 80px 64px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  min-height: 520px;
+}
+
+.mk-pcta__eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: #5a5a5a;
+  font-weight: 600;
+  margin: 0;
+}
+
+.mk-pcta__headline {
+  font-size: 48px;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  font-weight: 700;
+  margin: 0;
+  max-width: 16ch;
+}
+
+.mk-pcta__price {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-top: 16px;
+}
+
+.mk-pcta__price-currency {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111;
+  align-self: flex-start;
+  margin-top: 8px;
+}
+
+.mk-pcta__price-num {
+  font-size: 120px;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.mk-pcta__price-interval {
+  font-size: 16px;
+  color: #5a5a5a;
+  margin-left: 8px;
+}
+
+.mk-pcta__sub {
+  font-size: 14px;
+  color: #5a5a5a;
+  margin: 0;
+}
+
+.mk-pcta__button {
+  background: #111;
+  color: #fafaf7;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px 36px;
+  border-radius: 0;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  margin-top: 12px;
+}
+
+.mk-pcta__fine {
+  font-size: 12px;
+  color: #9b9b9b;
+  letter-spacing: 0.04em;
+}

@@ -1,0 +1,155 @@
+.set-bill {
+  background: #fafaf7;
+  color: #111;
+  font-family: 'Inter', sans-serif;
+  padding: 40px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-height: 560px;
+}
+
+.set-bill__title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.015em;
+}
+
+.set-bill__plan {
+  background: #fff;
+  border: 1px solid #111;
+  border-radius: 8px;
+  padding: 24px 28px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 24px;
+}
+
+.set-bill__plan-label {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: #6b6b6b;
+  font-weight: 700;
+}
+
+.set-bill__plan-name {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 6px 0 4px 0;
+  letter-spacing: -0.015em;
+}
+
+.set-bill__plan-meta {
+  font-size: 13px;
+  color: #6b6b6b;
+  margin: 0;
+}
+
+.set-bill__plan-tag {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  color: #2a6f3d;
+  background: #eaf5ee;
+  padding: 6px 12px;
+  border-radius: 3px;
+}
+
+.set-bill__usage {
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 8px;
+  padding: 18px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.set-bill__usage-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #111;
+}
+
+.set-bill__meter {
+  height: 8px;
+  background: #f0ede5;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.set-bill__meter span {
+  display: block;
+  height: 100%;
+  background: #111;
+}
+
+.set-bill__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.set-bill__method,
+.set-bill__invoices {
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 8px;
+  padding: 18px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.set-bill__method-label {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: #6b6b6b;
+  font-weight: 700;
+}
+
+.set-bill__card-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.set-bill__card-chip {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  padding: 3px 6px;
+  background: #111;
+  color: #fff;
+  border-radius: 2px;
+}
+
+.set-bill__edit-link {
+  font-size: 13px;
+  color: #d7263d;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  align-self: flex-start;
+}
+
+.set-bill__invoice-item {
+  font-size: 13px;
+  color: #111;
+  text-decoration: none;
+  padding: 4px 0;
+  border-bottom: 1px solid #f0ede5;
+}
+
+.set-bill__cancel {
+  font-size: 12px;
+  color: #9b9b9b;
+  align-self: flex-end;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-top: 8px;
+}

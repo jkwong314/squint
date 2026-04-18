@@ -1,0 +1,94 @@
+.set-dz {
+  background: #fff;
+  color: #111;
+  font-family: 'Inter', sans-serif;
+  padding: 40px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 560px;
+}
+
+.set-dz__back {
+  font-size: 12px;
+  color: #6b6b6b;
+  text-decoration: none;
+  align-self: flex-start;
+  order: -1;
+  letter-spacing: 0.04em;
+}
+
+.set-dz__title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #c0392b;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.set-dz__warning {
+  background: #fdecea;
+  border-left: 3px solid #c0392b;
+  color: #8a2a1f;
+  padding: 12px 16px;
+  font-size: 14px;
+}
+
+.set-dz__row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 24px;
+  padding: 20px 24px;
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 6px;
+}
+
+.set-dz__row h3 {
+  font-size: 16px;
+  margin: 0 0 4px 0;
+  font-weight: 700;
+}
+
+.set-dz__row p {
+  font-size: 13px;
+  color: #6b6b6b;
+  margin: 0;
+  max-width: 60ch;
+}
+
+.set-dz__row--delete {
+  border-color: #f1b4ab;
+  background: #fff8f7;
+}
+
+.set-dz__btn-secondary,
+.set-dz__btn-warn,
+.set-dz__btn-danger {
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.set-dz__btn-secondary {
+  background: #fff;
+  color: #111;
+  border: 1px solid #111;
+}
+
+.set-dz__btn-warn {
+  background: #fff;
+  color: #8a5b00;
+  border: 1px solid #d4a13a;
+}
+
+.set-dz__btn-danger {
+  background: #c0392b;
+  color: #fff;
+  border: 1px solid #c0392b;
+}
