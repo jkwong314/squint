@@ -1,7 +1,7 @@
 import { CATEGORIES } from '../data/categories.js';
 import { scenariosByCategory } from '../data/scenarios.js';
 
-export default function Home({ onPickCategory }) {
+export default function Home({ onPickCategory, progress }) {
   return (
     <div className="home">
       <div className="home-hero">
@@ -16,6 +16,8 @@ export default function Home({ onPickCategory }) {
       <div className="category-grid">
         {CATEGORIES.map((cat, i) => {
           const count = scenariosByCategory(cat.id).length;
+          const done = progress.categoryCompleted(cat.id);
+          const best = progress.categoryBest(cat.id);
           return (
             <button
               key={cat.id}
@@ -27,8 +29,12 @@ export default function Home({ onPickCategory }) {
               </div>
               <div className="category-tile-name">{cat.name}</div>
               <div className="category-tile-meta">
-                <span>{count} scenarios</span>
-                <span className="category-tile-score">—</span>
+                <span>
+                  {done} / {count} done
+                </span>
+                <span className="category-tile-score">
+                  {best !== null ? `${best} avg` : '—'}
+                </span>
               </div>
             </button>
           );
