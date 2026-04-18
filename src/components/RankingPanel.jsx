@@ -16,6 +16,9 @@ export default function RankingPanel({ rankedElements, onSubmit, title }) {
           Click elements in the mockup in order of visual importance.
           Click an assigned element again to remove it.
         </p>
+        <p className="panel-hint" style={{ marginTop: 'var(--s-2)', color: 'var(--ink-30)' }}>
+          Keys: <kbd>1</kbd>–<kbd>9</kbd> rank hovered · <kbd>⌫</kbd> undo · <kbd>↵</kbd> submit · <kbd>Esc</kbd> exit
+        </p>
       </div>
 
       <ol className="slot-list">

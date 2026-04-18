@@ -26,7 +26,7 @@ export default function Scenario({ scenario, onBack, onComplete, onRecordScore }
 }
 
 function ScenarioInner({ scenario, submitted, onSubmit, onBack, onComplete, onRecordScore }) {
-  const { order } = useRanking();
+  const { order, unassign, assign, rankOf } = useRanking();
   const [recorded, setRecorded] = useState(false);
 
   useEffect(() => {
@@ -36,6 +36,53 @@ function ScenarioInner({ scenario, submitted, onSubmit, onBack, onComplete, onRe
       setRecorded(true);
     }
   }, [submitted, recorded, order, scenario, onRecordScore]);
+
+  // Keyboard shortcuts
+  useEffect(() => {
+    const onKey = (e) => {
+      // Skip if user is typing in an input
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+      if (e.key === 'Escape') {
+        onBack();
+        return;
+      }
+      if (submitted) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          onComplete();
+        }
+        return;
+      }
+
+      if (e.key === 'Enter') {
+        if (order.length === scenario.expertOrder.length) {
+          e.preventDefault();
+          onSubmit();
+        }
+        return;
+      }
+
+      if (e.key === 'Backspace' && order.length > 0) {
+        e.preventDefault();
+        unassign(order[order.length - 1]);
+        return;
+      }
+
+      // 1-9: assign the hovered element
+      if (/^[1-9]$/.test(e.key)) {
+        const target = document.querySelector('.rankable:hover');
+        if (!target) return;
+        const id = target.getAttribute('data-rankable-id');
+        if (!id) return;
+        e.preventDefault();
+        if (rankOf(id) === null) assign(id);
+        else unassign(id);
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [submitted, order, scenario, onBack, onComplete, onSubmit, unassign, assign, rankOf]);
 
   return (
     <div className="scenario">
