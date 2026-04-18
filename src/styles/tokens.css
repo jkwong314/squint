@@ -1,0 +1,39 @@
+:root {
+  /* Type */
+  --font-sans: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --fs-display: 3.5rem;
+  --fs-h1: 1.75rem;
+  --fs-h2: 1.25rem;
+  --fs-body: 1rem;
+  --fs-meta: 0.8125rem;
+  --fs-micro: 0.6875rem;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  /* Color — monochrome + one accent */
+  --ink: #111111;
+  --ink-60: #5a5a5a;
+  --ink-30: #bcbcbc;
+  --ink-10: #e7e7e7;
+  --paper: #fafaf7;
+  --accent: #d7263d;
+  --correct: #2a6f3d;
+  --wrong: var(--accent);
+
+  /* Rhythm — 8px baseline grid */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 16px;
+  --s-4: 24px;
+  --s-5: 32px;
+  --s-6: 48px;
+  --s-7: 64px;
+  --s-8: 96px;
+
+  /* Lines */
+  --rule: 1px solid var(--ink);
+  --rule-soft: 1px solid var(--ink-10);
+}
