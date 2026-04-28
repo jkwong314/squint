@@ -54,11 +54,11 @@ export default function RankingPanel({ rankedElements, onSubmit, title }) {
           Clear
         </button>
         <button
-          className="btn btn-primary"
+          className={'btn btn-primary' + (isFull ? ' btn--ready' : '')}
           onClick={onSubmit}
           disabled={!isFull}
         >
-          {isFull ? 'Submit ranking' : `${order.length} / ${total} ranked`}
+          {isFull ? 'Submit ranking →' : `${order.length} / ${total} ranked`}
         </button>
       </div>
     </aside>
